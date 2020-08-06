@@ -123,11 +123,16 @@
         await liff.init({
           liffId: "1654646015-P1vZDVk7",
         });
-        getEnvironment();
-        getUserProfile();
-        getContext();
-        // getFriendship()
-        // createUniversalLink()
+        document.getElementById("isLoggedIn").append(liff.isLoggedIn());
+        if (liff.isLoggedIn()) {
+          getEnvironment();
+          getUserProfile();
+          getContext();
+          // getFriendship()
+          // createUniversalLink()
+        } else {
+          liff.login();
+        }
       }
       main();
     </script>
