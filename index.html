@@ -86,9 +86,11 @@
         if (liff.getContext().type !== "none") {
           await liff.sendMessages([
             {
-              type: "sticker",
-              stickerId: 1,
-              packageId: 1,
+              type: "image",
+              originalContentUrl:
+                "https://cpekung.github.io/vcard/assets/img/04597.jpg",
+              previewImageUrl:
+                "https://cpekung.github.io/vcard/assets/img/04597.jpg",
             },
           ]);
           alert("Message Sent");
